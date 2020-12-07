@@ -1,0 +1,24 @@
+{
+  "name": "eat-the-burger",
+  "version": "1.0.0",
+  "description": "\"An app for ordering and eating fake burgers\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhfoss/Eat-The-Burger.git"
+  },
+  "author": "Daniel Hawthorne-Foss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhfoss/Eat-The-Burger/issues"
+  },
+  "homepage": "https://github.com/dhfoss/Eat-The-Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
