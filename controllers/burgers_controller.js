@@ -10,7 +10,13 @@ router.get('/', (req, res) => {
             burgers: data
         }
         res.render('index', hbsObject)
-    })
-})
+    });
+});
+
+router.post('/api/burgers', (req, res) => {
+    burger.create('burger_name', [req.body.name], result => {
+    res.json({ id: result.insertId });
+    });
+});
 
 module.exports = router;

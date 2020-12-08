@@ -5,7 +5,7 @@ const connection = require('./connection');
 
 // Object Relational Mapper
 const orm = {
-    selectAll: function(tableInput, cb) {
+    selectAll: (tableInput, cb) => {
         let queryString = 'SELECT * FROM ' + tableInput + ';';
         connection.query(queryString, (err, result) => {
             if (err) throw err;
@@ -13,8 +13,15 @@ const orm = {
         })
     },
 
+    create: (table, colName, val, cb) => {
+        let queryString = `INSERT INTO ${table}(${colName}) VALUES (?)`
+        console.log(queryString);
+        connection.query(queryString, val, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        });
 
-
+    }
 
 
     // updateOne: function(){}
