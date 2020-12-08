@@ -5,7 +5,12 @@ const burger = require('../models/burger');
 // router .get, router.post, router.put
 
 router.get('/', (req, res) => {
-    res.send('test');
+    burger.all(data => {
+        let hbsObject = {
+            burgers: data
+        }
+        res.render('index', hbsObject)
+    })
 })
 
 module.exports = router;

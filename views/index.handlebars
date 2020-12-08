@@ -1,0 +1,30 @@
+<h1>Welcome to Tofu Sam's Burger Jam</h1>
+
+<h2>Burger Orders</h2>
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{> burgers/burger-block devoured=false}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+
+<h2>Devoured Burgers</h2>
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burgers/burger-block devoured=true}}
+        {{/if}}
+    {{/each}}
+</ul>
+
+
+<h2>Place an Order</h2>
+<form>
+    <div class="form-group">
+        <label for="burger">Burger Name:</label>
+        <input id="burger" name="name" type="text">
+    </div>
+    <button type="submit">Order a burger</button>
+</form>
