@@ -12,6 +12,11 @@ const burger = {
         orm.create('burgers', colName, val, result => {
             cb(result);
         })
+    },
+    update: (colName, id, cb) => {
+        orm.updateOne('burgers', colName, true, id, result => {
+            cb(result);
+        })
     }
 }
 

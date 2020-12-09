@@ -5,8 +5,8 @@ const connection = require('./connection');
 
 // Object Relational Mapper
 const orm = {
-    selectAll: (tableInput, cb) => {
-        let queryString = 'SELECT * FROM ' + tableInput + ';';
+    selectAll: (table, cb) => {
+        let queryString = `SELECT * FROM ${table};`
         connection.query(queryString, (err, result) => {
             if (err) throw err;
             cb(result);
@@ -20,9 +20,17 @@ const orm = {
             if (err) throw err;
             cb(result);
         });
+    },
 
+    updateOne: (table, colName, condition, id, cb) => {
+        let queryString = `UPDATE ${table} SET ${colName}=${condition} WHERE id=?`;
+        connection.query(queryString, id, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        })
     }
 
+    // UPDATE burgers SET devoured = true WHERE id = 1;
 
     // updateOne: function(){}
 }

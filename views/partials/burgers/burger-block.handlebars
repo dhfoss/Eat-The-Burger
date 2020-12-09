@@ -1,6 +1,6 @@
 <li>
     <p>Burger Name: {{burger_name}}</p>
-    <p>Burger Id: {{id}}</p>
+    <p class="burgerId">Burger Id: <span>{{id}}</span></p>
         {{#if devoured}}<p>Burger devoured!</p>{{/if}}
-        {{#unless devoured}}<button>Devour burger?</button>{{/unless}}
+        {{#unless devoured}}<button class="devour">Devour burger?</button>{{/unless}}
 </li>

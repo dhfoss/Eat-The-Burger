@@ -19,4 +19,10 @@ router.post('/api/burgers', (req, res) => {
     });
 });
 
+router.put('/api/burgers', (req, res) => {
+    burger.update('devoured', [req.body.id], result => {
+        res.json({ id: result.insertId });
+    })
+});
+
 module.exports = router;
