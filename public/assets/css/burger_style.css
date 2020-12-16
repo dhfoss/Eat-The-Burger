@@ -1,0 +1,15 @@
+* {
+    font-family: 'Nerko One', cursive;
+}
+
+body {
+    background-color: orange;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 25%;
+}

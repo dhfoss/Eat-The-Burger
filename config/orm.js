@@ -29,10 +29,6 @@ const orm = {
             cb(result);
         })
     }
-
-    // UPDATE burgers SET devoured = true WHERE id = 1;
-
-    // updateOne: function(){}
 }
 
 module.exports = orm;

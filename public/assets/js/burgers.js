@@ -22,8 +22,6 @@ $(function() {
             id: Number($(event.target).siblings('.burgerId').children('span').text())
         };
         
-        console.log(devouredBurger);
-
         $.ajax('/api/burgers', {
             type: 'PUT',
             data: devouredBurger
@@ -35,4 +33,3 @@ $(function() {
         );
     });
 });
-  
